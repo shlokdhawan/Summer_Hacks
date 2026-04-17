@@ -7,7 +7,7 @@ from uuid import UUID, uuid4, uuid5, NAMESPACE_DNS
 from pydantic import BaseModel, Field
 
 
-Source = Literal["gmail", "slack", "whatsapp", "telegram"]
+Source = Literal["gmail", "slack", "whatsapp", "telegram", "manual"]
 
 
 class NormalizedMessage(BaseModel):
@@ -75,4 +75,19 @@ class RAGChatRequest(BaseModel):
 class RAGChatResponse(BaseModel):
     answer: str
     sources: List[RAGHit]
+
+
+class ReminderResponse(BaseModel):
+    id: str
+    message_id: str
+    source: str
+    event_title: str
+    event_time: datetime
+    reminder_time: datetime
+    status: Literal["pending", "sent", "cancelled"]
+    notification_sent: bool
+    created_at: datetime
+    importance: float
+    intent: str
+    calendar_event_id: Optional[str] = None
 

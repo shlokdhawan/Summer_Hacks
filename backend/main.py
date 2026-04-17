@@ -8,6 +8,7 @@ from routes import telegram as telegram_routes
 from routes import whatsapp as whatsapp_routes
 from routes import slack as slack_routes
 from routes import messages as messages_routes
+from routes import event_routes
 from settings import settings
 
 
@@ -36,3 +37,4 @@ app.include_router(telegram_routes.router)
 app.include_router(whatsapp_routes.router)
 app.include_router(slack_routes.router)
 app.include_router(messages_routes.router)
+app.include_router(event_routes.router)

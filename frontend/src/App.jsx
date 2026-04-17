@@ -12,6 +12,7 @@ import SenderProfile from './pages/SenderProfile';
 import AIAnalysis from './pages/AIAnalysis';
 import LandingPage from './pages/LandingPage';
 import ChatInbox from './pages/ChatInbox';
+import Reminders from './pages/Reminders';
 import { NotFoundState } from './components/ui/ErrorState';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/chat-inbox" element={<ChatInbox />} />
           <Route path="/daily-brief" element={<DailyBrief />} />
           <Route path="/relation-graph" element={<RelationGraph />} />
+          <Route path="/reminders" element={<Reminders />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/notifications" element={<NotificationCenter />} />

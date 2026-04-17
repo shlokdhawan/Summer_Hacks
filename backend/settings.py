@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     google_client_id: Optional[str] = None
     google_client_secret: Optional[str] = None
     google_redirect_uri: Optional[str] = None
-    google_scopes: str = "https://www.googleapis.com/auth/gmail.readonly"
+    google_scopes: str = "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/calendar.events"
 
     # Gemini
     gemini_api_key: Optional[str] = None
@@ -48,7 +48,7 @@ class Settings(BaseSettings):
     twilio_auth_token: Optional[str] = None
 
     # Auth (demo)
-    require_user_header: bool = True
+    require_user_header: bool = False
 
 
 settings = Settings()

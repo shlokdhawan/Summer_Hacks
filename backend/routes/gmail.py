@@ -7,6 +7,7 @@ from typing import Optional
 from uuid import uuid4
 
 from fastapi import APIRouter, Header, HTTPException, Request
+from fastapi.responses import RedirectResponse
 from google.auth.transport.requests import Request as GoogleRequest
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import Flow

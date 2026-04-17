@@ -1,6 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Inbox, Sparkles, Network, Settings, Search, Bell, X, MessageSquare } from 'lucide-react';
+import { Inbox, Sparkles, Network, Settings, Search, Bell, X, MessageSquare, Calendar } from 'lucide-react';
 import { useUser } from '../../context/UserContext';
 
 export default function Sidebar({ isMobileOpen, onClose }) {
@@ -10,6 +10,7 @@ export default function Sidebar({ isMobileOpen, onClose }) {
     { to: '/chat-inbox', icon: MessageSquare, label: 'Inbox Memory' },
     { to: '/daily-brief', icon: Sparkles, label: 'Daily Brief' },
     { to: '/relation-graph', icon: Network, label: 'Relation Graph' },
+    { to: '/reminders', icon: Calendar, label: 'Reminders' },
     { to: '/settings', icon: Settings, label: 'Settings' }
   ];
 
