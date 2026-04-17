@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  body {
+    @apply bg-curator-bg text-curator-text-primary antialiased selection:bg-curator-teal/30 selection:text-curator-teal font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline font-black tracking-tight;
+  }
+
+  /* Custom Scrollbar Global Setup */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2A2A2A transparent;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-curator-card/80 backdrop-blur-md border border-curator-border/50;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:border-curator-teal/30 hover:shadow-[0_0_20px_rgba(0,212,180,0.1)];
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-curator-border rounded-full hover:bg-curator-teal/50 transition-colors;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .aura-glow {
+    background: radial-gradient(circle at center, rgba(0, 212, 180, 0.15) 0%, transparent 70%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-curator-teal to-blue-400;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, minmax(180px, auto));
+    }
+  }
+
+  .text-responsive-h1 {
+    @apply text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-[0.9];
+  }
+
+  .text-responsive-h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-black tracking-tight;
+  }
+}
