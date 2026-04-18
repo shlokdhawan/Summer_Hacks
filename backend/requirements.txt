@@ -24,3 +24,7 @@ anthropic==0.42.0
 
 # Groq (Llama 3)
 groq
+
+# Event Processing
+dateparser
+requests
