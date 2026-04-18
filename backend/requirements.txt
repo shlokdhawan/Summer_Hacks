@@ -28,3 +28,7 @@ groq
 # Event Processing
 dateparser
 requests
+
+# Integrations
+twilio
+slack-sdk
